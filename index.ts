@@ -42,7 +42,7 @@ async function update() {
         videoJson.data.items[0].statistics.commentCount
       );
 
-      newVideoTitle = `this video has ${views} views, ${likes} likes, ${dislikes} dislikes and ${comments} comments. 🤯`; // change video title here
+      newVideoTitle = `i have ${views} views, ${likes} likes, ${dislikes} dislikes and ${comments} comments.`; // change video title here
     })
     .catch((err) => {
       console.log("Error");
@@ -79,8 +79,11 @@ async function update() {
 }
 
 async function main() {
+  console.log(`Hello world!\nVideo ID: ${config.id}`);
   while (true) {
+    console.log("Updating");
     await update();
+    console.log("Wait for 8 mins");
     await sleep(480000); // 8 mins
   }
 }
