@@ -27,7 +27,7 @@ Rename `config_example.json` to `config.json` and put your video id there
 Now let's login and generate access token `user_credential.json`
 
 ```bash
-npm run login
+npm run auth
 ```
 
 Open in browser and select your account
@@ -52,6 +52,14 @@ Finally, build and run the code
 ```bash
 npm run build
 npm start
+```
+
+## Revoke (logout)
+
+Just run this and app can't access to your account anymore
+
+```bash
+npm run revoke
 ```
 
 ## Docker
