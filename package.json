@@ -15,6 +15,10 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "build": "tsc",
-    "dev": "nodemon ./src/index.ts"
+    "dev": "nodemon ./src/index.ts",
+    "login": "ts-node ./scripts/login.ts",
+    "getvideo": "ts-node ./scripts/getVideoInfo.ts",
+    "update1": "ts-node ./scripts/updateTitle1.ts",
+    "update2": "ts-node ./scripts/updateTitle2.ts"
   }
 }
