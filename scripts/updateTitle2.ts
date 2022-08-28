@@ -41,7 +41,7 @@ async function main() {
         videoJson.data.items[0].statistics.commentCount
       );
 
-      newVideoTitle = `this video has ${views} views, ${likes} likes, ${dislikes} dislikes and ${comments} comments. 🤯`;
+      newVideoTitle = `i have ${views} views, ${likes} likes, ${dislikes} dislikes and ${comments} comments.`; // change video title here
     })
     .catch((err) => {
       console.log(err);
