@@ -1,4 +1,4 @@
-// logout
+// logout (revoke)
 
 import { google } from "googleapis";
 

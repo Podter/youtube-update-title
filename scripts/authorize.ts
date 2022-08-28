@@ -1,4 +1,4 @@
-// login and generate user_credential.json
+// login and generate user_credential.json (authorize)
 
 import { google } from "googleapis";
 import express from "express";
@@ -50,8 +50,8 @@ app.get("/oauth2callback", async (req, res) => {
 });
 
 // listen
-app.listen(process.env.PORT || 8080, () => {
-  console.log(`App listening on port ${process.env.PORT || 8080}`);
+app.listen(process.env.PORT || 80, () => {
+  console.log(`App listening on port ${process.env.PORT || 80}`);
   const authorizationUrl = oauth2Client.generateAuthUrl({
     // 'online' (default) or 'offline' (gets refresh_token)
     access_type: "offline",
