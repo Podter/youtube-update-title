@@ -43,7 +43,7 @@ npm run update2 # Update title to "i have ... views"
 Time to modify some codes (optional)
 
 ```typescript
-// index.ts at line 45
+// index.ts at line 43
 newVideoTitle = `i have ${views} views, ${likes} likes, ${dislikes} dislikes and ${comments} comments.`; // change video title here
 ```
 
