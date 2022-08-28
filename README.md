@@ -1,6 +1,7 @@
 # youtube-update-title
 
-update youtube title to match with views
+Updates youtube title to match with views count and others
+![youtube](assets/yt.png)
 
 ## Usage
 
@@ -29,6 +30,9 @@ Now let's login and generate access token `user_credential.json`
 ```bash
 npm run auth
 ```
+
+You should get something like this
+![files](assets/files.png)
 
 Open in browser and select your account
 

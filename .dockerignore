@@ -132,3 +132,6 @@ config_example.json
 
 # scripts
 scripts
+
+# assets
+assets
