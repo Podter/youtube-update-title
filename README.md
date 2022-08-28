@@ -53,3 +53,25 @@ Finally, build and run the code
 npm run build
 npm start
 ```
+
+## Docker
+
+Follow [these steps above](#usage) and then build the docker image
+
+```bash
+npm run build:docker
+# or
+docker build -t youtube-update-title .
+```
+
+and then run it
+
+```bash
+npm run start:docker
+# or
+docker run -d --name youtube-update-title --restart unless-stopped youtube-update-title
+```
+
+You don't need to do anything else because configs (.json files) already built into the image
+
+> Note: You have to rebuild image everytime when token is expired or you just make some changes
