@@ -129,3 +129,5 @@ dist
 # json
 client_secret.json
 asd.json
+user_credential.json
+config.json
