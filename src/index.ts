@@ -95,7 +95,7 @@ app.get("/test2", async (_req, res) => {
       auth: oauth2Client,
       part: ["snippet"],
       requestBody: {
-        id: "10aZL-1B09I",
+        id: config.id,
         snippet: {
           title: "hello world!",
           categoryId: categoryId,
@@ -112,7 +112,7 @@ app.get("/test3", async (_req, res) => {
   await youtube.videos
     .list({
       auth: oauth2Client,
-      id: ["10aZL-1B09I"],
+      id: [config.id],
       part: ["snippet", "statistics"],
     })
     .then((video) => {
@@ -143,7 +143,7 @@ app.get("/test3", async (_req, res) => {
       auth: oauth2Client,
       part: ["snippet"],
       requestBody: {
-        id: "10aZL-1B09I",
+        id: config.id,
         snippet: {
           title: videoTitle,
           categoryId: categoryId,
