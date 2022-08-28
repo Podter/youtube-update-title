@@ -14,8 +14,6 @@ const oauth2Client = new google.auth.OAuth2(
 
 oauth2Client.credentials = token;
 
-let videoTitle: string;
-
 async function update() {
   let categoryId: string | null | undefined;
   let newVideoTitle: string = "null";
@@ -81,6 +79,9 @@ async function update() {
 async function main() {
   console.log(`Hello world!\nVideo ID: ${config.id}`);
   while (true) {
+    console.log("Refreshing token");
+    const newToken = (await oauth2Client.refreshAccessToken()).credentials;
+    oauth2Client.credentials = newToken;
     console.log("Updating");
     await update();
     console.log("Wait for 8 mins");

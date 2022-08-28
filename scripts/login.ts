@@ -54,7 +54,7 @@ app.listen(process.env.PORT || 8080, () => {
   console.log(`App listening on port ${process.env.PORT || 8080}`);
   const authorizationUrl = oauth2Client.generateAuthUrl({
     // 'online' (default) or 'offline' (gets refresh_token)
-    access_type: "online",
+    access_type: "offline",
     /** Pass in the scopes array defined above.
      * Alternatively, if only one scope is needed, you can pass a scope URL as a string */
     scope: scopes,
