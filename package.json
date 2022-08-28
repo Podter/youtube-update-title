@@ -18,7 +18,7 @@
     "getvideo": "ts-node ./scripts/getVideoInfo.ts",
     "update1": "ts-node ./scripts/updateTitle1.ts",
     "update2": "ts-node ./scripts/updateTitle2.ts",
-    "start:docker": "docker run -d --name youtube-update-title youtube-update-title",
+    "start:docker": "docker run -d --name youtube-update-title --restart unless-stopped youtube-update-title",
     "build:docker": "docker build -t youtube-update-title ."
   }
 }
