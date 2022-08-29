@@ -15,7 +15,7 @@ cd youtube-update-title
 npm install
 ```
 
-Download and rename the OAuth Client ID JSON file to `client_secret.json` and put in the folder
+Download and rename the OAuth Client ID JSON file to `client_secret.json` and put in the folder (you can see how to do it [here](GETOAUTH.md))
 
 Rename `config_example.json` to `config.json` and put your video id there
 
@@ -87,3 +87,9 @@ docker run -d --name youtube-update-title --restart unless-stopped youtube-updat
 You don't need to do anything else because configs (.json files) already built into the image
 
 > Note: You have to rebuild image everytime when token is expired or you just make some changes
+
+## Important!!
+
+Never push this repository or built Docker image with `client_secret.json`, `user_credential.json` or you will expose your account credential! (if someone have those files, they can do anything with your youtube account! like change your channel name or delete some videos)
+
+If you accdient did it, immediately [revoke](#revoke) the credential and regenerate OAuth Client ID JSON file!
