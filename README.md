@@ -92,4 +92,4 @@ You don't need to do anything else because configs (.json files) already built i
 
 Never push this repository or built Docker image with `client_secret.json`, `user_credential.json` or you will expose your account credential! (if someone have those files, they can do anything with your youtube account! like change your channel name or delete some videos)
 
-If you accdient did it, immediately [revoke](#revoke) the credential and regenerate OAuth Client ID JSON file!
+If you accdient did it, immediately [revoke](#revoke-logout) the credential and regenerate OAuth Client ID JSON file!
