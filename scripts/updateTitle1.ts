@@ -16,6 +16,7 @@ const oauth2Client = new google.auth.OAuth2(
 oauth2Client.credentials = token;
 
 let categoryId: string | null | undefined;
+let description: string | null | undefined;
 
 async function main() {
   await youtube.videos
@@ -27,6 +28,7 @@ async function main() {
     .then((video) => {
       const videoJson = JSON.parse(JSON.stringify(video));
       categoryId = videoJson.data.items[0].snippet.categoryId;
+      description = videoJson.data.items[0].snippet.description;
     })
     .catch((err) => {
       console.log(err);
@@ -42,6 +44,7 @@ async function main() {
         snippet: {
           title: "hello world!",
           categoryId: categoryId,
+          description: description,
         },
       },
     })

@@ -16,6 +16,7 @@ oauth2Client.credentials = token;
 
 async function update() {
   let categoryId: string | null | undefined;
+  let description: string | null | undefined;
   let newVideoTitle: string = "null";
   let oldVideoTitle: string = "";
 
@@ -30,6 +31,7 @@ async function update() {
       const videoJson = JSON.parse(JSON.stringify(video));
       categoryId = videoJson.data.items[0].snippet.categoryId;
       oldVideoTitle = videoJson.data.items[0].snippet.title;
+      description = videoJson.data.items[0].snippet.description;
 
       const views = parseInt(videoJson.data.items[0].statistics.viewCount);
       const likes = parseInt(videoJson.data.items[0].statistics.likeCount);
@@ -58,6 +60,7 @@ async function update() {
           snippet: {
             title: newVideoTitle,
             categoryId: categoryId,
+            description: description,
           },
         },
       })
