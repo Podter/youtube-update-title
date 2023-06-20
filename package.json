@@ -1,7 +1,9 @@
 {
 	"name": "youtube-update-title",
 	"version": "0.0.0",
-	"private": true,
+	"repository": "https://github.com/Podter/youtube-update-title.git",
+	"author": "Podter",
+	"license": "MIT",
 	"scripts": {
 		"deploy": "wrangler publish",
 		"dev": "wrangler dev"
